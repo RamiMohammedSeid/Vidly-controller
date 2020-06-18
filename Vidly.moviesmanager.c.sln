@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly.moviesmanager.c", "Vidly.moviesmanager.c\Vidly.moviesmanager.c.csproj", "{05D14B0E-0D88-41B1-9A2A-8028973A9EEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05D14B0E-0D88-41B1-9A2A-8028973A9EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D14B0E-0D88-41B1-9A2A-8028973A9EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D14B0E-0D88-41B1-9A2A-8028973A9EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D14B0E-0D88-41B1-9A2A-8028973A9EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
