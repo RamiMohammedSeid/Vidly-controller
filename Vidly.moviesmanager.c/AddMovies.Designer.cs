@@ -42,6 +42,8 @@
             this.comming_soon = new System.Windows.Forms.CheckBox();
             this.trailer_link = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.type = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -148,7 +150,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(170, 366);
+            this.button2.Location = new System.Drawing.Point(170, 417);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -186,9 +188,34 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "trailer streaming link";
             // 
+            // type
+            // 
+            this.type.FormattingEnabled = true;
+            this.type.Items.AddRange(new object[] {
+            "Most rated",
+            "Most liked",
+            "Newest"});
+            this.type.Location = new System.Drawing.Point(10, 381);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(235, 21);
+            this.type.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 365);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Type";
+            // 
             // AddMovies
             // 
-            this.ClientSize = new System.Drawing.Size(257, 406);
+            this.ClientSize = new System.Drawing.Size(257, 452);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.type);
             this.Controls.Add(this.trailer_link);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comming_soon);
@@ -229,5 +256,7 @@
         private System.Windows.Forms.CheckBox comming_soon;
         private System.Windows.Forms.TextBox trailer_link;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox type;
+        private System.Windows.Forms.Label label5;
     }
 }

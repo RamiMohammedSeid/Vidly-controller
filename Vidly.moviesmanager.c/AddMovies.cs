@@ -27,8 +27,8 @@ namespace Vidly.moviesmanager.c
             series_tile_image.Text = (string)input.GetValue("movie_tile_image", "");
             comming_soon.Checked = (bool)input.GetValue("comming_soon",false);
             series_tags.Text = (string)input.GetValue("movie_tags", "");
-            trailer_link.Text = (string)input.GetValue("trailer_link", "");      
-           
+            trailer_link.Text = (string)input.GetValue("trailer_link", "");
+            type.SelectedIndex = (int)input.GetValue("type",0);
 
             this.handler = edtoradd;
         }
@@ -47,7 +47,8 @@ namespace Vidly.moviesmanager.c
             {"movie_tile_image",series_tile_image.Text},
             {"comming_soon",comming_soon.Checked},
             {"movie_tags",series_tags.Text.Replace(" ","")},
-            {"trailer_link",trailer_link.Text}
+            {"trailer_link",trailer_link.Text} ,
+            {"type",type.SelectedIndex}
            };
              var update = Builders<BsonDocument>.Update;
              var updatedefinition = update.Set("movie_name", series_name.Text).Set("movie_descrition", series_description.Text)
@@ -55,7 +56,8 @@ namespace Vidly.moviesmanager.c
              .Set("movie_tile_image", series_tile_image.Text)
              .Set("movie_tags", series_tags.Text.Replace(" ", ""))
              .Set("comming_soon", comming_soon.Checked)
-             .Set("trailer_link", trailer_link.Text);
+             .Set("trailer_link", trailer_link.Text)
+             .Set("type", type.SelectedIndex);
              handler(output_doc, updatedefinition);
             Close();
         }

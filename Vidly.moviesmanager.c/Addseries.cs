@@ -28,8 +28,9 @@ namespace Vidly.moviesmanager.c
             series_seasons_length.Value = int.Parse(((double)input.GetValue("seasons_length",1.0)).ToString());
             comming_soon.Checked = (bool)input.GetValue("comming_soon",false);
             series_tags.Text = (string)input.GetValue("series_tags","");
-            trailer_link.Text = (string)input.GetValue("trailer_link", "");      
-           
+            trailer_link.Text = (string)input.GetValue("trailer_link", "");
+            type.SelectedIndex = (int)input.GetValue("type", 0);
+
 
             this.handler = edtoradd;
         }
@@ -49,7 +50,8 @@ namespace Vidly.moviesmanager.c
             {"seasons_length",float.Parse(series_seasons_length.Value.ToString())},
             {"comming_soon",comming_soon.Checked},
             {"series_tags",series_tags.Text.Replace(" ","")},
-            {"trailer_link",trailer_link.Text}
+            {"trailer_link",trailer_link.Text} ,
+            {"type",type.SelectedIndex}
            };
              var update = Builders<BsonDocument>.Update;
             var updatedefinition = update.Set("series_name", series_name.Text).Set("series_descrition", series_description.Text)
@@ -58,7 +60,8 @@ namespace Vidly.moviesmanager.c
              .Set("seasons_length", float.Parse(series_seasons_length.Value.ToString()))
              .Set("series_tags", series_tags.Text.Replace(" ", ""))
              .Set("comming_soon", comming_soon.Checked)
-             .Set("trailer_link", trailer_link.Text);
+             .Set("trailer_link", trailer_link.Text)
+             .Set("type", type.SelectedIndex);
              handler(output_doc, updatedefinition);
             Close();
         }

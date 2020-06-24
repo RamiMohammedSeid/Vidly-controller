@@ -44,6 +44,8 @@
             this.comming_soon = new System.Windows.Forms.CheckBox();
             this.trailer_link = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.type = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.series_seasons_length)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,7 +181,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(170, 420);
+            this.button2.Location = new System.Drawing.Point(170, 444);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -190,7 +192,7 @@
             // comming_soon
             // 
             this.comming_soon.AutoSize = true;
-            this.comming_soon.Location = new System.Drawing.Point(10, 395);
+            this.comming_soon.Location = new System.Drawing.Point(10, 382);
             this.comming_soon.Name = "comming_soon";
             this.comming_soon.Size = new System.Drawing.Size(190, 17);
             this.comming_soon.TabIndex = 13;
@@ -217,9 +219,34 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "trailer streaming link";
             // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 401);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Type";
+            // 
+            // type
+            // 
+            this.type.FormattingEnabled = true;
+            this.type.Items.AddRange(new object[] {
+            "Most rated",
+            "Most liked",
+            "Newest"});
+            this.type.Location = new System.Drawing.Point(10, 417);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(235, 21);
+            this.type.TabIndex = 18;
+            // 
             // Addseries
             // 
-            this.ClientSize = new System.Drawing.Size(257, 446);
+            this.ClientSize = new System.Drawing.Size(257, 479);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.type);
             this.Controls.Add(this.trailer_link);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comming_soon);
@@ -265,5 +292,7 @@
         private System.Windows.Forms.CheckBox comming_soon;
         private System.Windows.Forms.TextBox trailer_link;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox type;
     }
 }
